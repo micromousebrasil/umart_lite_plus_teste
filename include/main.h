@@ -26,8 +26,13 @@
 #include "sensores.h"
 #include "encoders.h"
 #include "usart1.h"
+#include "usb_user.h"
 #include "flash.h"
 
+
+/* Definições ----------------------------------------------------------------*/
+#define STDIO_USB	// STDIO_UART ou STDIO_USB: direciona as funções de escrita
+				// e leitura (printf, scanf, putc...) para a UART ou para a USB
 
 /* Constantes ----------------------------------------------------------------*/
 /* Macros --------------------------------------------------------------------*/

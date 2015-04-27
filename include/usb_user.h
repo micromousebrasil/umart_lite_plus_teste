@@ -1,32 +1,33 @@
 /**
   ******************************************************************************
-  * @file    umart_lite_plus_teste/include/usart1.h
+  * @file    umart_lite_plus_teste/include/usb_user.h
   * @author  Kleber Lima da Silva (kleber.ufu@hotmail.com)
   * @version V1.0.1
   * @date    20-Abril-2015
-  * @brief   Cabeçalho para o módulo usart1.c
+  * @brief   Cabeçalho para o módulo usb_user.c
   ******************************************************************************
   */
 
 /* Define para previnir a inclusão recursiva ---------------------------------*/
-#ifndef __USART1_H
-#define __USART1_H
+#ifndef __USB_USER_H
+#define __USB_USER_H
 
 
 /* Includes ------------------------------------------------------------------*/
+#include <sys/stat.h>
 #include <stdio.h>
+#include <usbd_core.h>
+#include <usbd_cdc.h>
+#include <usbd_cdc_if_template.h>
+#include <usbd_desc.h>
 #include "stm32f4xx.h"
 #include "main.h"
 
 /* Constantes ----------------------------------------------------------------*/
-#define BAUD_RATE	115200
-#define USART_TIMEOUT	100
-
 /* Protótipos das Funções --------------------------------------------------- */
-void usart1Config(void);
+void usbConfig (void);
 
 /* Variáveis ---------------------------------------------------------------- */
-extern UART_HandleTypeDef huart1;
 
 
-#endif /* __USART1_H */
+#endif /* __USB_USER_H */

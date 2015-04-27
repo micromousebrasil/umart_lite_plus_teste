@@ -47,6 +47,8 @@ void usart1Config(void)
 }
 
 
+#ifdef STDIO_UART
+
 /**
   * @brief Redefinição da função de escrita para uso da função printf - stdio.h
   */
@@ -67,3 +69,5 @@ int _read (int file, char *ptr, int len)
 
 	return len;
 }
+
+#endif

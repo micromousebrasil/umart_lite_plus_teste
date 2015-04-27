@@ -12,7 +12,6 @@
 #include "main.h"
 
 
-
 /**
   * @brief Programa Principal
   */
@@ -29,9 +28,12 @@ int main (void)
 	sensoresConfig();
 	encodersConfig();
 	usart1Config();
+	usbConfig();
 
 
 	// Inicio do programa ------------------------------------------------------
+	// As mensagens enviadas por printf podem ser destinadas à USB ou à UART,
+	// para isto altere a definição no arquivo main.h
 	printf("Programa TESTE - uMaRT LITE+ V1.1!\r\n");
 
 	allLEDs(HIGH);
